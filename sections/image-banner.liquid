@@ -45,12 +45,14 @@
           assign sizes = "100vw"
         endif
       -%}
+      {% capture style_string %}object-position: {{ section.settings.image.focal_point.x}}% {{ section.settings.image.focal_point.y}}%;{% endcapture %}
       {{ section.settings.image | image_url: width: 1500 | image_tag:
         loading: 'lazy',
         width: section.settings.image.width,
         height: image_height,
         class: image_class,
         sizes: sizes,
+        style: style_string,
         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
         alt: section.settings.image.alt | escape
       }}
@@ -75,11 +77,13 @@
           assign sizes = "100vw"
         endif
       -%}
+      {% capture style_string %}object-position: {{ section.settings.image_2.focal_point.x}}% {{ section.settings.image_2.focal_point.y}}%;{% endcapture %}
       {{ section.settings.image_2 | image_url: width: 1500 | image_tag:
         loading: 'lazy',
         width: section.settings.image_2.width,
         height: image_height_2,
         class: image_class_2,
+        style: style_string,
         sizes: sizes,
         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
         alt: section.settings.image_2.alt | escape
