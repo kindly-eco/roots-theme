@@ -227,6 +227,13 @@
   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
+        {% if settings.enable_dark_mode == true %}
+          <p>
+            {% if settings.energy_saving_message %}
+              <span>{{ settings.energy_saving_message }}</span>
+            {% endif %}
+            <dark-mode-toggle id="dark-mode-toggle" label="{{ settings.dark_mode_label }}"></dark-mode-toggle></p>
+        {% endif %}
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
             {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}

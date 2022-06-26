@@ -1,0 +1,89 @@
+:root {
+  --media-padding: 10px;
+  --media-border-opacity: 100;
+  --media-border-width: 2px;
+  --media-radius: 0px;
+  --media-shadow-opacity: 1;
+  --media-shadow-horizontal-offset: 2px;
+  --media-shadow-vertical-offset: 2px;
+  --media-shadow-blur-radius: 2px;
+  --media-shadow-visible: 1;
+
+  --page-width: 140rem;
+  --page-width-margin: 2rem;
+
+  --card-image-padding: 0.25rem;
+  --card-corner-radius: 0.25rem;
+  --card-text-alignment: center;
+  --card-border-width: 0.25rem;
+  --card-border-opacity: 1;
+  --card-shadow-opacity: 0.5;
+  --card-shadow-visible: 1;
+  --card-shadow-horizontal-offset: 1rem;
+  --card-shadow-vertical-offset: 1rem;
+  --card-shadow-blur-radius: 1rem;
+
+  --badge-corner-radius: 0.25rem;
+
+  --popup-border-width: 2px;
+  --popup-border-opacity: 0.5;
+  --popup-corner-radius: 4px;
+  --popup-shadow-opacity: 0.5;
+  --popup-shadow-horizontal-offset: 4px;
+  --popup-shadow-vertical-offset: 4px;
+  --popup-shadow-blur-radius: 4px;
+
+  --drawer-border-width: 2px;
+  --drawer-border-opacity: 0.5;
+  --drawer-shadow-opacity: 0.5;
+  --drawer-shadow-horizontal-offset: 4px;
+  --drawer-shadow-vertical-offset: 4px;
+  --drawer-shadow-blur-radius: 4px;
+
+  --spacing-sections-desktop: 2rem;
+  --spacing-sections-mobile: 1rem;
+
+  --grid-desktop-vertical-spacing: 2rem;
+  --grid-desktop-horizontal-spacing: 2rem;
+  --grid-mobile-vertical-spacing: 1rem;
+  --grid-mobile-horizontal-spacing: 1rem;
+
+  --text-boxes-border-opacity: 0.5;
+  --text-boxes-border-width: 2px;
+  --text-boxes-radius: 2px;
+  --text-boxes-shadow-opacity: 0.5;
+  --text-boxes-shadow-visible: 1;
+  --text-boxes-shadow-horizontal-offset: 4px;
+  --text-boxes-shadow-vertical-offset: 4px;
+  --text-boxes-shadow-blur-radius: 4px;
+
+  --alpha-button-background: 1;
+  --buttons-radius: 0.25rem;
+  --buttons-radius-outset: 0.25rem;
+  --buttons-border-width: 2px;
+  --buttons-border-opacity: 0;
+  --buttons-shadow-opacity: 0;
+  --buttons-shadow-visible: 0;
+  --buttons-shadow-horizontal-offset: 0;
+  --buttons-shadow-vertical-offset: 0;
+  --buttons-shadow-blur-radius: 0;
+  --buttons-border-offset: 0;
+
+  --inputs-radius: 0.25rem;
+  --inputs-border-width: 1px;
+  --inputs-border-opacity: 1;
+  --inputs-shadow-opacity: 1;
+  --inputs-shadow-horizontal-offset: 0;
+  --inputs-margin-offset: 0;
+  --inputs-shadow-vertical-offset: 0;
+  --inputs-shadow-blur-radius: 0;
+  --inputs-radius-outset: 0.25rem;
+
+  --variant-pills-radius: 0.25rem;
+  --variant-pills-border-width: 2px;
+  --variant-pills-border-opacity: 0.5;
+  --variant-pills-shadow-opacity: 0;
+  --variant-pills-shadow-horizontal-offset: 4px;
+  --variant-pills-shadow-vertical-offset: 4px;
+  --variant-pills-shadow-blur-radius: 4px;
+}
