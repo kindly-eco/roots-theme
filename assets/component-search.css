@@ -8,16 +8,16 @@
 }
 
 .search__button:focus-visible {
-  background-color: rgb(var(--color-background));
+  background-color: hsl(var(--color-background));
   z-index: 2;
 }
 
 .search__button:focus {
-  background-color: rgb(var(--color-background));
+  background-color: hsl(var(--color-background));
   z-index: 2;
 }
 
-.search__button:not(:focus-visible):not(.focused){
+.search__button:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
   background-color: inherit;
 }

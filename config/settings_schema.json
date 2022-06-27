@@ -16,14 +16,14 @@
       },
       {
         "type": "color",
-        "id": "colors_accent_1",
+        "id": "accent",
         "default": "#008080",
         "label": "t:settings_schema.colors.settings.colors_accent_1.label",
         "info": "t:settings_schema.colors.settings.colors_accent_1.info"
       },
       {
         "type": "color",
-        "id": "colors_solid_button_labels",
+        "id": "on_accent",
         "default": "#FFFFFF",
         "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
         "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"

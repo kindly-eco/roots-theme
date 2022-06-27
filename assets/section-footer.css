@@ -1,5 +1,5 @@
 .footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-top: 0.1rem solid hsla(var(--text), 0.08);
 }
 
 .footer:not(.color-background-1) {
@@ -41,7 +41,7 @@
 }
 
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
+  border-top: solid 0.1rem hsla(var(--text), 0.08);
   padding-top: 3rem;
 }
 
@@ -185,7 +185,8 @@
     margin: 0;
   }
 
-  .footer-block__newsletter:not(:only-child) .newsletter-form__message--success {
+  .footer-block__newsletter:not(:only-child)
+    .newsletter-form__message--success {
     left: auto;
   }
 }
@@ -242,7 +243,7 @@
 
 .footer__localization h2 {
   margin: 1rem 1rem 0.5rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: hsla(var(--text), 0.75);
 }
 
 @media screen and (min-width: 750px) {
@@ -308,7 +309,7 @@
 
 .disclosure__button.localization-form__select {
   padding: calc(2rem + var(--inputs-border-width));
-  background: rgb(var(--color-background));
+  background: hsl(var(--color-background));
 }
 
 noscript .localization-form__select {
@@ -323,7 +324,7 @@ noscript .localization-form__select {
 
 .localization-form__select .icon-caret {
   position: absolute;
-  content: '';
+  content: "";
   height: 0.6rem;
   right: calc(var(--inputs-border-width) + 1.5rem);
   top: calc(50% - 0.2rem);
@@ -334,7 +335,7 @@ noscript .localization-form__select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  color: rgb(var(--color-foreground));
+  color: hsl(var(--text));
   width: 100%;
   padding-right: 4rem;
   padding-bottom: 1.5rem;
@@ -358,7 +359,6 @@ noscript .localization-selector.link {
   opacity: 1;
   animation: animateLocalization var(--duration-default) ease;
 }
-
 
 @media screen and (min-width: 750px) {
   .footer__payment {
@@ -413,18 +413,18 @@ noscript .localization-selector.link {
 
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
-  color: rgba(var(--color-foreground), 0.75);
+  color: hsla(var(--text), 0.75);
 }
 
 .footer-block__details-content .list-menu__item--active {
   transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
+  color: hsl(var(--text));
 }
 
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link:hover,
   .copyright__content a:hover {
-    color: rgb(var(--color-foreground));
+    color: hsl(var(--text));
     text-decoration: underline;
     text-underline-offset: 0.3rem;
   }
@@ -485,11 +485,11 @@ noscript .localization-selector.link {
 
 .footer .disclosure__link {
   padding: 0.95rem 3.5rem 0.95rem 2rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: hsla(var(--text), 0.75);
 }
 
 .footer .disclosure__link:hover {
-  color: rgb(var(--color-foreground));
+  color: hsl(var(--text));
 }
 
 .footer .disclosure__link--active {

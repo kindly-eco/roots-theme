@@ -60,7 +60,7 @@ template.innerHTML = `
   [part="label"] {
     align-items: center;
     display: flex;
-    color: rgb(var(--toggle-label));
+    color: hsl(var(--toggle-label));
     font: inherit;
     font-size: .83em;
     min-height: 2rem;
@@ -72,7 +72,7 @@ template.innerHTML = `
   }
 
   [part="label"]::before {
-    background: rgb(var(--toggle-track));
+    background: hsl(var(--toggle-track));
     border-radius: 500rem;
     content: "";
     display: block;
@@ -84,8 +84,8 @@ template.innerHTML = `
   }
 
   [part="label"]::after {
-    background: rgb(var(--toggle-thumb));
-    box-shadow: 0 1px 0 rgb(0 0 0 / 15%);
+    background: hsl(var(--toggle-thumb));
+    box-shadow: 0 1px 0 hsl(0 0 0 / 15%);
     border-radius: 100%;
     content: "";
     display: block;
@@ -108,7 +108,7 @@ template.innerHTML = `
   }
 
   [part="input"]:focus-visible + [part="label"]::before {
-    background: rgb(var(--toggle-focus, transparent));
+    background: hsl(var(--toggle-focus, transparent));
   }
 </style>
 <form part="form">

@@ -1,30 +1,54 @@
 :root {
-  /* brand */
-  --color-base-accent-2: var(--color-base-accent-1);
-  --gradient-base-accent-1: var(--color-base-accent-1);
-  --gradient-base-accent-2: var(--color-base-accent-1);
-
   /* text */
-  --color-base-text: var(--slate-1-2);
-  --color-foreground: var(--slate-1-2);
+  --text: var(--slate-1-5);
+  --text-secondary: var(--slate-2);
+  --text-inverse: var(--slate-1);
 
   /* backgrounds */
-  --color-base-background-1: var(--slate-19);
-  --color-base-background-2: var(--slate-16);
-  --gradient-base-background-1: var(--slate-19);
-  --gradient-base-background-2: var(--slate-16);
-  --payment-terms-background-color: var(--slate-16);
-
-  /* buttons */
-  --color-base-outline-button-labels: var(--color-base-solid-button-labels);
+  --background: var(--slate-16);
+  --background-secondary: var(--slate-17);
+  --elevated: var(--slate-15);
+  --sunken: var(--slate-17);
 
   /* dimension */
-  --color-shadow: var(--slate-12);
+  --drop: var(--slate-19);
+  --inset: var(--slate-9);
+
+  /* functional */
+  --link: var(--blue-3);
+  --visited: var(--purple-3);
+  --active: var(--pink-3);
+  --focus: var(--yellow-1-2);
+  --on-focus: var(--slate-9);
+  --on-focus-link: var(--blue-6);
+  --on-focus-visited: var(--purple-6);
+  --on-focus-active: var(--red-6);
+
+  /* elements */
+  --divider: var(--slate-12);
+  --input: var(--slate-9);
+  --input-icon: var(--slate-2);
+  --meta: var(--slate-12);
+  --on-meta: var(--slate-1-5);
+
+  /* custom elements */
+
+  /* command */
+  --command: var(--ocean-3);
 
   /* dark mode toggle */
   --toggle-label: var(--slate-1-5);
   --toggle-track: var(--slate-12);
-  --toggle-thumb: var(--color-base-accent-1);
+  --toggle-thumb: var(--accent);
 
-  color-scheme: light;
+  /* error */
+  --error: var(--red-6);
+  --on-error: var(--slate-1);
+
+  color-scheme: dark;
+}
+
+/* logo switch */
+.light-mode-logo {
+  display: none;
 }

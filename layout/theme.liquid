@@ -37,8 +37,8 @@
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
 
-      assign color_base_accent_1 = settings.colors_accent_1 | color_to_rgb | remove: "rgb(" | remove: ")" | remove: ","
-      assign colors_solid_button_labels = settings.colors_solid_button_labels | color_to_rgb | remove: "rgb(" | remove: ")" | remove: ","
+      assign accent = settings.accent | color_to_hsl | remove: "hsl(" | remove: ")" | remove: ","
+      assign on_accent = settings.on_accent | color_to_hsl | remove: "hsl(" | remove: ")" | remove: ","
     %}
 
     {% style %}
@@ -61,8 +61,8 @@
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }}; 
 
-        --color-base-accent-1: {{ color_base_accent_1 }};
-        --color-base-solid-button-labels: {{ colors_solid_button_labels }};
+        --accent: {{ accent }};
+        --on-accent: {{ on_accent }};
       }
 
       *,
@@ -99,6 +99,7 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'roots-elements.css' | asset_url | stylesheet_tag }}
     {{ 'roots-colours.css' | asset_url | stylesheet_tag }}
     {{ 'roots-light.css' | asset_url | stylesheet_tag }}
     {{ 'roots-units.css' | asset_url | stylesheet_tag }}

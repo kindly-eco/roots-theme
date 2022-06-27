@@ -81,12 +81,11 @@
 
 .shopify-payment-button__button [role="button"].focused,
 .no-js .shopify-payment-button__button [role="button"]:focus {
-  outline: 0.2rem solid rgba(var(--color-foreground) / 0.5) !important;
+  outline: 0.2rem solid hsla(var(--text) / 0.5) !important;
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.1rem
-      rgba(var(--color-button) / var(--alpha-button-border)),
-    0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground) / 0.3) !important;
+  box-shadow: 0 0 0 0.1rem hsla(var(--accent) / var(--alpha-button-border)),
+    0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0.5rem 0.4rem hsla(var(--text) / 0.3) !important;
 }
 
 .shopify-payment-button__button [role="button"]:focus:not(:focus-visible) {
@@ -95,28 +94,27 @@
 }
 
 .shopify-payment-button__button [role="button"]:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground) / 0.5) !important;
-  box-shadow: 0 0 0 0.1rem
-      rgba(var(--color-button) / var(--alpha-button-border)),
-    0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground) / 0.3) !important;
+  outline: 0.2rem solid hsla(var(--text) / 0.5) !important;
+  box-shadow: 0 0 0 0.1rem hsla(var(--accent) / var(--alpha-button-border)),
+    0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0.5rem 0.4rem hsla(var(--text) / 0.3) !important;
 }
 
 .shopify-payment-button__button--unbranded {
-  background-color: rgba(var(--color-button) / var(--alpha-button-background));
-  color: rgb(var(--color-button-text));
+  background-color: hsla(var(--accent) / var(--alpha-button-background));
+  color: hsl(var(--on-accent));
   font-size: 1.4rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
   letter-spacing: 0.07rem;
 }
 
 .shopify-payment-button__button--unbranded::selection {
-  background-color: rgba(var(--color-button-text) / 0.3);
+  background-color: hsla(var(--on-accent) / 0.3);
 }
 
 .shopify-payment-button__button--unbranded:hover,
 .shopify-payment-button__button--unbranded:hover:not([disabled]) {
-  background-color: rgba(var(--color-button) / var(--alpha-button-background));
+  background-color: hsla(var(--accent) / var(--alpha-button-background));
 }
 
 .shopify-payment-button__more-options {
@@ -190,11 +188,11 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type="radio"] + label {
   border: var(--variant-pills-border-width) solid
-    rgba(var(--color-foreground) / var(--variant-pills-border-opacity));
-  background-color: rgb(var(--color-background));
-  color: rgba(var(--color-foreground));
+    hsla(var(--text) / var(--variant-pills-border-opacity));
+  background-color: hsl(var(--color-background));
+  color: hsla(var(--text));
   border-radius: var(--variant-pills-radius);
-  color: rgb(var(--color-foreground));
+  color: hsl(var(--text));
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
   padding: 1rem 2rem;
@@ -219,16 +217,16 @@ fieldset.product-form__input .form__label {
   box-shadow: var(--variant-pills-shadow-horizontal-offset)
     var(--variant-pills-shadow-vertical-offset)
     var(--variant-pills-shadow-blur-radius)
-    rgba(var(--color-shadow) / var(--variant-pills-shadow-opacity));
+    hsla(var(--drop) / var(--variant-pills-shadow-opacity));
 }
 
 .product-form__input input[type="radio"] + label:hover {
-  border-color: rgb(var(--color-foreground));
+  border-color: hsl(var(--text));
 }
 
 .product-form__input input[type="radio"]:checked + label {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-base-background-1));
+  background-color: hsl(var(--text));
+  color: hsl(var(--background));
 }
 
 @media screen and (forced-colors: active) {
@@ -238,24 +236,24 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type="radio"]:checked + label::selection {
-  background-color: rgba(var(--color-background) / 0.3);
+  background-color: hsla(var(--color-background) / 0.3);
 }
 
 .product-form__input input[type="radio"]:disabled + label {
-  border-color: rgba(var(--color-foreground) / 0.1);
-  color: rgba(var(--color-foreground) / 0.4);
+  border-color: hsla(var(--text) / 0.1);
+  color: hsla(var(--text) / 0.4);
   text-decoration: line-through;
 }
 .product-form__input input[type="radio"]:focus-visible + label {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0 0.5rem rgba(var(--color-foreground) / 0.55);
+  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0 0.5rem hsla(var(--text) / 0.55);
 }
 
 /* Fallback */
 .product-form__input input[type="radio"].focused + label,
 .no-js .shopify-payment-button__button [role="button"]:focus + label {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0 0.5rem rgba(var(--color-foreground) / 0.55);
+  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0 0.5rem hsla(var(--text) / 0.55);
 }
 
 /* No outline when focus-visible is available in the browser */
@@ -275,8 +273,8 @@ fieldset.product-form__input .form__label {
 }
 
 .no-js .product-form__submit.button--secondary {
-  --color-button: var(--color-base-accent-1);
-  --color-button-text: var(--color-base-solid-button-labels);
+  --accent: var(--accent);
+  --on-accent: var(--on-accent);
   --alpha-button-background: 1;
 }
 
@@ -298,7 +296,7 @@ fieldset.product-form__input .form__label {
 
 /* Overrides */
 .shopify-payment-button__more-options {
-  color: rgb(var(--color-foreground));
+  color: hsl(var(--text));
 }
 
 .shopify-payment-button__button {
@@ -324,7 +322,7 @@ fieldset.product-form__input .form__label {
 a.product__text {
   display: block;
   text-decoration: none;
-  color: rgba(var(--color-foreground) / 0.75);
+  color: hsla(var(--text) / 0.75);
 }
 
 .product__text.caption-with-letter-spacing {
@@ -371,7 +369,7 @@ a.product__text {
 
 .product .price--sold-out .price__badge-sold-out {
   background: transparent;
-  color: rgb(var(--color-base-text));
+  color: hsl(var(--text));
   border-color: transparent;
 }
 
@@ -503,11 +501,11 @@ a.product__text {
   }
 
   .product__media-list::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--color-foreground));
+    background-color: hsl(var(--text));
   }
 
   .product__media-list::-webkit-scrollbar-track {
-    background-color: rgba(var(--color-foreground) / 0.2);
+    background-color: hsla(var(--text) / 0.2);
   }
 
   .product__media-list .product__media-item {
@@ -579,10 +577,10 @@ a.product__text {
 
 .product__media-icon,
 .thumbnail__badge {
-  background-color: rgb(var(--color-background));
+  background-color: hsl(var(--color-background));
   border-radius: 50%;
-  border: 0.1rem solid rgba(var(--color-foreground) / 0.1);
-  color: rgb(var(--color-foreground));
+  border: 0.1rem solid hsla(var(--text) / 0.1);
+  color: hsl(var(--text));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -605,7 +603,7 @@ a.product__text {
 }
 
 .product__modal-opener:hover .product__media-icon {
-  border: 0.1rem solid rgba(var(--color-foreground) / 0.1);
+  border: 0.1rem solid hsla(var(--text) / 0.1);
 }
 
 @media screen and (min-width: 750px) {
@@ -673,19 +671,19 @@ a.product__text {
 }
 
 .product__media-toggle:focus-visible:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0rem 0.5rem rgba(var(--color-foreground) / 0.5);
+  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0rem 0.5rem hsla(var(--text) / 0.5);
   border-radius: var(--media-radius);
 }
 
 .product__media-toggle.focused:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0rem 0.5rem rgba(var(--color-foreground) / 0.5);
+  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0rem 0.5rem hsla(var(--text) / 0.5);
   border-radius: var(--media-radius);
 }
 
 .product-media-modal {
-  background-color: rgb(var(--color-background));
+  background-color: hsl(var(--color-background));
   height: 100%;
   position: fixed;
   top: 0;
@@ -769,10 +767,10 @@ a.product__text {
 }
 
 .product-media-modal__toggle {
-  background-color: rgb(var(--color-background));
-  border: 0.1rem solid rgba(var(--color-foreground) / 0.1);
+  background-color: hsl(var(--color-background));
+  border: 0.1rem solid hsla(var(--text) / 0.1);
   border-radius: 50%;
-  color: rgba(var(--color-foreground) / 0.55);
+  color: hsla(var(--text) / 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -827,7 +825,7 @@ a.product__text {
 }
 
 .product-media-modal__toggle:hover {
-  color: rgba(var(--color-foreground) / 0.75);
+  color: hsla(var(--text) / 0.75);
 }
 
 .product-media-modal__toggle .icon {
@@ -849,7 +847,7 @@ a.product__text {
   left: 0;
   overflow: auto;
   width: 100%;
-  background: rgba(var(--color-foreground) / 0.2);
+  background: hsla(var(--text) / 0.2);
   height: 100%;
 }
 
@@ -861,7 +859,7 @@ a.product__text {
 
 .product-popup-modal__content {
   border-radius: var(--popup-corner-radius);
-  background-color: rgb(var(--color-background));
+  background-color: hsl(var(--color-background));
   overflow: auto;
   height: 80%;
   margin: 0 auto;
@@ -872,28 +870,28 @@ a.product__text {
   position: absolute;
   top: 0;
   padding: 0 1.5rem 0 3rem;
-  border-color: rgba(var(--color-foreground) / var(--popup-border-opacity));
+  border-color: hsla(var(--text) / var(--popup-border-opacity));
   border-style: solid;
   border-width: var(--popup-border-width);
   box-shadow: var(--popup-shadow-horizontal-offset)
     var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
-    rgba(var(--color-shadow) / var(--popup-shadow-opacity));
+    hsla(var(--drop) / var(--popup-shadow-opacity));
 }
 
 .product-popup-modal__content.focused {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground) / 0.3),
+  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0.5rem 0.4rem hsla(var(--text) / 0.3),
     var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset)
       var(--popup-shadow-blur-radius)
-      rgba(var(--color-shadow) / var(--popup-shadow-opacity));
+      hsla(var(--drop) / var(--popup-shadow-opacity));
 }
 
 .product-popup-modal__content:focus-visible {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground) / 0.3),
+  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0.5rem 0.4rem hsla(var(--text) / 0.3),
     var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset)
       var(--popup-shadow-blur-radius)
-      rgba(var(--color-shadow) / var(--popup-shadow-opacity));
+      hsla(var(--drop) / var(--popup-shadow-opacity));
 }
 
 @media screen and (min-width: 750px) {
@@ -968,10 +966,10 @@ a.product__text {
 }
 
 .product-popup-modal__toggle {
-  background-color: rgb(var(--color-background));
-  border: 0.1rem solid rgba(var(--color-foreground) / 0.1);
+  background-color: hsl(var(--color-background));
+  border: 0.1rem solid hsla(var(--text) / 0.1);
   border-radius: 50%;
-  color: rgba(var(--color-foreground) / 0.55);
+  color: hsla(var(--text) / 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -985,7 +983,7 @@ a.product__text {
 }
 
 .product-popup-modal__toggle:hover {
-  color: rgba(var(--color-foreground) / 0.75);
+  color: hsla(var(--text) / 0.75);
 }
 
 .product-popup-modal__toggle .icon {
@@ -1105,7 +1103,7 @@ a.product__text {
   height: 100%;
   width: 100%;
   padding: 0;
-  color: rgb(var(--color-base-text));
+  color: hsl(var(--text));
   cursor: pointer;
   background-color: transparent;
 }
@@ -1119,25 +1117,25 @@ a.product__text {
 }
 
 .thumbnail[aria-current] {
-  box-shadow: 0 0 0rem 0.1rem rgb(var(--color-foreground));
-  border-color: rgb(var(--color-foreground));
+  box-shadow: 0 0 0rem 0.1rem hsl(var(--text));
+  border-color: hsl(var(--text));
 }
 
 .thumbnail[aria-current]:focus-visible {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0rem 0.5rem rgba(var(--color-foreground) / 0.5);
+  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0rem 0.5rem hsla(var(--text) / 0.5);
 }
 
 .thumbnail[aria-current]:focus,
 .thumbnail.focused {
   outline: 0;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0rem 0.5rem rgba(var(--color-foreground) / 0.5);
+  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0rem 0.5rem hsla(var(--text) / 0.5);
 }
 
 .thumbnail[aria-current]:focus:not(:focus-visible) {
   outline: 0;
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
+  box-shadow: 0 0 0 0.1rem hsl(var(--text));
 }
 
 .thumbnail img {
@@ -1166,7 +1164,7 @@ a.product__text {
 }
 
 .thumbnail__badge {
-  color: rgb(var(--color-foreground), 0.6);
+  color: hsl(var(--text), 0.6);
   height: 2rem;
   width: 2rem;
   left: auto;

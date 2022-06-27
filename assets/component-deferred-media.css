@@ -35,13 +35,19 @@
 
 .deferred-media__poster:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 var(--media-border-width) rgba(var(--color-foreground), var(--media-border-opacity)), 0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(var(--color-background)),0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(var(--color-foreground),.5);
+  box-shadow: 0 0 0 var(--media-border-width)
+      hsla(var(--text), var(--media-border-opacity)),
+    0 0 0 calc(var(--media-border-width) + 0.3rem) hsl(var(--color-background)),
+    0 0 0 calc(var(--media-border-width) + 0.5rem) hsla(var(--text), 0.5);
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
 
 .deferred-media__poster:focus {
   outline: none;
-  box-shadow: 0 0 0 var(--media-border-width) rgba(var(--color-foreground), var(--media-border-opacity)), 0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(var(--color-background)),0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(var(--color-foreground),.5);
+  box-shadow: 0 0 0 var(--media-border-width)
+      hsla(var(--text), var(--media-border-opacity)),
+    0 0 0 calc(var(--media-border-width) + 0.3rem) hsl(var(--color-background)),
+    0 0 0 calc(var(--media-border-width) + 0.5rem) hsla(var(--text), 0.5);
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
 
@@ -51,10 +57,10 @@
 }
 
 .deferred-media__poster-button {
-  background-color: rgb(var(--color-background));
-  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  background-color: hsl(var(--color-background));
+  border: 0.1rem solid hsla(var(--text), 0.1);
   border-radius: 50%;
-  color: rgb(var(--color-foreground));
+  color: hsl(var(--text));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +70,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--duration-short) ease, color var(--duration-short) ease;
+  transition: transform var(--duration-short) ease,
+    color var(--duration-short) ease;
   z-index: 1;
 }
 
@@ -80,4 +87,3 @@
 .deferred-media__poster-button .icon-play {
   margin-left: 0.2rem;
 }
-

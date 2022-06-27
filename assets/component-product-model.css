@@ -1,6 +1,6 @@
 .product__xr-button {
-  background: rgba(var(--color-foreground), 0.08);
-  color: rgb(var(--color-foreground));
+  background: hsla(var(--text), 0.08);
+  color: hsl(var(--text));
   margin: 1rem auto;
   box-shadow: none;
   display: flex;

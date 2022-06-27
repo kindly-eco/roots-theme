@@ -1,0 +1,424 @@
+/* Main root */
+
+:where(html) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 40em) {
+  :where(html) {
+    font-size: 106.25%;
+  }
+}
+
+@media (min-width: 62em) {
+  :where(html) {
+    font-size: 112.5%;
+  }
+}
+
+@media (min-width: 84em) {
+  :where(html) {
+    font-size: 116%;
+  }
+}
+
+@media (min-width: 106em) {
+  :where(html) {
+    font-size: 120%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(html) {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Sectioning root */
+
+:where(body) {
+  background-color: hsl(var(--background));
+  color: hsl(var(--text));
+  font-family: var(--font-body-family);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Content sectioning */
+
+:where(address) {
+  font-style: normal;
+}
+
+:where(article, aside, section) {
+  padding: clamp(2rem, 4vw, 8rem) max((100% - 80rem) / 2, 4vw);
+}
+
+:where(article, aside, section) > *:nth-child(2) {
+  margin-block-start: 0;
+}
+
+:where(article, aside, section) > *:last-child {
+  margin-block-end: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+:where(h1) {
+  font-size: clamp(1.5em, 3vw + 1em, 2.5em);
+  line-height: 1.15;
+  margin-block-end: 0.48em;
+}
+
+:where(h2, .h2) {
+  font-size: clamp(1.33em, 2vw + 1em, 2em);
+  line-height: 1.2;
+  margin-block-end: 0.58em;
+}
+
+:where(h3, .h3) {
+  font-size: clamp(1.17em, 1vw + 1em, 1.5em);
+  line-height: 1.2;
+  margin-block-end: 0.83em;
+}
+
+:where(h4, .h4) {
+  font-size: clamp(1.17em, 1vw + 1em, 1.5em);
+  line-height: 1.33;
+  margin-block-end: 0.83em;
+}
+
+:where(h5, .h5) {
+  font-size: clamp(1em, 0.5vw + 1em, 1.17em);
+  line-height: 1.5;
+  margin-block-end: 1em;
+}
+
+:where(h6, .h6) {
+  font-size: clamp(1em, 0.5vw + 1em, 1.17em);
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  margin-block-end: 1em;
+}
+
+/* Text content */
+
+:where(blockquote) {
+  margin-inline: 0;
+}
+
+:where(dd) {
+  margin-inline-start: 2rem;
+}
+
+:where(figure) {
+  margin-inline: 0;
+}
+
+:where(figcaption) {
+  color: hsl(var(--text-secondary));
+  font-size: 0.83em;
+  margin: 1.5em 0;
+  max-inline-size: 65ch;
+}
+
+:where(hr) {
+  border-style: solid;
+  color: hsl(var(--divider));
+  margin-inline: 0;
+}
+
+:where(li) {
+  max-inline-size: 62ch;
+}
+
+:where(ol, ul) {
+  padding-inline-start: 2rem;
+}
+
+:where(pre) {
+  overflow-x: auto;
+}
+
+/* Inline text semantics */
+
+:where(a) {
+  color: hsl(var(--link));
+  cursor: pointer;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 1.5px;
+}
+
+:where(a:hover) {
+  text-decoration-line: none;
+}
+
+:where(a:focus-visible) {
+  background-color: hsl(var(--focus));
+  box-shadow: 0 0 0 4px hsl(var(--focus));
+  color: hsl(var(--on-focus-link));
+  outline: none;
+}
+
+:where(a:visited) {
+  color: hsl(var(--visited));
+}
+
+:where(a:visited:focus-visible) {
+  color: hsl(var(--on-focus-visited));
+}
+
+:where(a:active) {
+  color: hsl(var(--active));
+}
+
+:where(a:active:focus-visible) {
+  color: hsl(var(--on-focus-active));
+}
+
+:where(cite) {
+  font-style: normal;
+}
+
+:where(code) {
+  font-size: 1.17em;
+}
+
+:where(mark) {
+  background-color: hsl(var(--focus));
+}
+
+:where(small) {
+  font-size: 0.83em;
+}
+
+:where(sub, sup) {
+  line-height: 1;
+}
+
+/* Image and multimedia */
+
+:where(audio, video) {
+  display: block;
+  max-inline-size: 100%;
+}
+
+:where(audio, video):focus {
+  box-shadow: 0 3px 0 0 hsl(var(--focus));
+  outline: 0;
+}
+
+:where(img) {
+  block-size: auto;
+  display: block;
+  max-inline-size: 100%;
+}
+
+:where(video) {
+  aspect-ratio: 16 / 9;
+  block-size: auto;
+}
+
+/* Embedded content */
+
+/* SVG and math */
+
+:where(iframe, svg) {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* Table content */
+
+:where(caption) {
+  text-align: start;
+}
+
+:where(table) {
+  border-collapse: collapse;
+  max-inline-size: 100%;
+}
+
+:where(thead, tfoot) > :where(tr) > :where(td, th) {
+  padding-block: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+:where(tbody, thead) > :where(tr) {
+  border-block-end: 1px solid hsl(var(--divider));
+}
+
+:where(td, th) {
+  padding-block: clamp(1.5rem, 2vw, 3rem);
+  text-align: start;
+}
+
+:where(td, th):not(:first-child) {
+  padding-inline-start: 1.5rem;
+}
+
+:where(td, th):not(:last-child) {
+  padding-inline-end: 1.5rem;
+}
+
+/* Form */
+
+:where(form) {
+  margin-block: 1rem;
+}
+
+:where(fieldset) {
+  border: none;
+  max-inline-size: 100%;
+  padding: 0;
+}
+
+:where(fieldset) > :where(div) {
+  display: grid;
+  grid-gap: 1.25rem;
+  position: relative;
+}
+
+:where(fieldset) > :where(div) > :where(div) {
+  position: relative;
+}
+
+:where(legend) {
+  font-family: inherit;
+  font-size: 1.5em;
+  margin-block-end: 1rem;
+}
+
+:where(label) {
+  display: block;
+  font-family: inherit;
+  font-size: 1.17em;
+  margin-block: 0.48em;
+}
+
+:where(label) > :where(input) {
+  margin-inline-end: 0.5rem;
+}
+
+:where(input, select, textarea) {
+  background-color: transparent;
+  border: 1px solid hsl(var(--input));
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  max-inline-size: 100%;
+  padding: 0.5rem;
+}
+
+:where(input:is([type="checkbox" i], [type="radio" i])) {
+  float: inline-start;
+  margin-inline-end: 0.5rem;
+}
+
+:where(input, select, textarea)::placeholder {
+  color: hsl(var(--text-secondary));
+}
+
+:where(input, select, textarea):focus {
+  box-shadow: 0 0 0 4px hsl(var(--focus));
+  outline: 0;
+}
+
+:where(select) {
+  appearance: none;
+  background-image: linear-gradient(
+      45deg,
+      transparent 50%,
+      hsl(var(--input-icon)) 50%
+    ),
+    linear-gradient(135deg, hsl(var(--input-icon)) 50%, transparent 50%);
+  background-position: calc(100% - 10px) 1rem, calc(100% - 5px) 1rem;
+  background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px;
+  padding-block: 0.5rem;
+  padding-inline-end: 0.25rem;
+}
+
+:where(button) {
+  background-color: hsl(var(--accent));
+  border: none;
+  border-radius: 4rem;
+  color: hsl(var(--on-accent));
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: inherit;
+  gap: 0.75rem;
+  max-inline-size: max-content;
+  padding: 1rem 2rem;
+  place-items: center;
+}
+
+:where(button:focus) {
+  outline: none;
+}
+
+:where(button:hover) {
+  background-color: hsl(var(--accent));
+}
+
+:where(button:focus-visible) {
+  background-color: hsl(var(--focus));
+  color: hsl(var(--on-focus));
+  outline: none;
+}
+
+:where(button:active) {
+  inset-block-start: 1px;
+  position: relative;
+}
+
+/* Interactive elements */
+
+:where(details:where) {
+  margin-block: 1em;
+}
+
+:where(details) > :where(*:not(summary)) {
+  margin-inline: 1.5rem;
+}
+
+:where(dialog) {
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--divider));
+  box-shadow: -14px 20px 20px hsl(var(--drop) / 30%);
+  color: hsl(var(--text));
+}
+
+:where(summary) {
+  color: hsl(var(--link));
+  cursor: pointer;
+  max-inline-size: 70ch;
+}
+
+:where(summary:focus) {
+  outline: none;
+}
+
+:where(summary:focus-visible) {
+  background-color: hsl(var(--focus));
+  box-shadow: 0 0 0 4px hsl(var(--focus));
+  outline: none;
+}
+
+/* Pseudo-elements */
+
+::selection {
+  background-color: hsl(var(--focus));
+  -webkit-text-fill-color: hsl(var(--text));
+}
+
+/* Custom */
+
+.hidden,
+.visually-hidden {
+  display: none !important;
+}
