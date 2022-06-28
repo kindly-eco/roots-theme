@@ -376,39 +376,6 @@
   position: relative;
 }
 
-/* Interactive elements */
-
-:where(details:where) {
-  margin-block: 1em;
-}
-
-:where(details) > :where(*:not(summary)) {
-  margin-inline: 1.5rem;
-}
-
-:where(dialog) {
-  background-color: hsl(var(--background));
-  border: 1px solid hsl(var(--divider));
-  box-shadow: -14px 20px 20px hsl(var(--drop) / 30%);
-  color: hsl(var(--text));
-}
-
-:where(summary) {
-  color: hsl(var(--link));
-  cursor: pointer;
-  max-inline-size: 70ch;
-}
-
-:where(summary:focus) {
-  outline: none;
-}
-
-:where(summary:focus-visible) {
-  background-color: hsl(var(--focus));
-  box-shadow: 0 0 0 4px hsl(var(--focus));
-  outline: none;
-}
-
 /* Pseudo-elements */
 
 ::selection {
