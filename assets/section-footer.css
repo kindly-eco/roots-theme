@@ -309,7 +309,7 @@
 
 .disclosure__button.localization-form__select {
   padding: calc(2rem + var(--inputs-border-width));
-  background: hsl(var(--color-background));
+  background: hsl(var(--background));
 }
 
 noscript .localization-form__select {

@@ -41,7 +41,7 @@ pickup-availability[available] {
 }
 
 pickup-availability-drawer {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   height: 100%;
   opacity: 0;
   overflow-y: auto;

@@ -84,7 +84,7 @@
   outline: 0.2rem solid hsla(var(--text) / 0.5) !important;
   outline-offset: 0.3rem;
   box-shadow: 0 0 0 0.1rem hsla(var(--accent) / var(--alpha-button-border)),
-    0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0 0.3rem hsl(var(--background)),
     0 0 0.5rem 0.4rem hsla(var(--text) / 0.3) !important;
 }
 
@@ -96,7 +96,7 @@
 .shopify-payment-button__button [role="button"]:focus-visible {
   outline: 0.2rem solid hsla(var(--text) / 0.5) !important;
   box-shadow: 0 0 0 0.1rem hsla(var(--accent) / var(--alpha-button-border)),
-    0 0 0 0.3rem hsl(var(--color-background)),
+    0 0 0 0.3rem hsl(var(--background)),
     0 0 0.5rem 0.4rem hsla(var(--text) / 0.3) !important;
 }
 
@@ -189,7 +189,7 @@ fieldset.product-form__input .form__label {
 .product-form__input input[type="radio"] + label {
   border: var(--variant-pills-border-width) solid
     hsla(var(--text) / var(--variant-pills-border-opacity));
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   color: hsla(var(--text));
   border-radius: var(--variant-pills-radius);
   color: hsl(var(--text));
@@ -236,7 +236,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type="radio"]:checked + label::selection {
-  background-color: hsla(var(--color-background) / 0.3);
+  background-color: hsla(var(--background) / 0.3);
 }
 
 .product-form__input input[type="radio"]:disabled + label {
@@ -245,14 +245,14 @@ fieldset.product-form__input .form__label {
   text-decoration: line-through;
 }
 .product-form__input input[type="radio"]:focus-visible + label {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0 0.5rem hsla(var(--text) / 0.55);
 }
 
 /* Fallback */
 .product-form__input input[type="radio"].focused + label,
 .no-js .shopify-payment-button__button [role="button"]:focus + label {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0 0.5rem hsla(var(--text) / 0.55);
 }
 
@@ -577,7 +577,7 @@ a.product__text {
 
 .product__media-icon,
 .thumbnail__badge {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   border-radius: 50%;
   border: 0.1rem solid hsla(var(--text) / 0.1);
   color: hsl(var(--text));
@@ -671,19 +671,19 @@ a.product__text {
 }
 
 .product__media-toggle:focus-visible:after {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0rem 0.5rem hsla(var(--text) / 0.5);
   border-radius: var(--media-radius);
 }
 
 .product__media-toggle.focused:after {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0rem 0.5rem hsla(var(--text) / 0.5);
   border-radius: var(--media-radius);
 }
 
 .product-media-modal {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   height: 100%;
   position: fixed;
   top: 0;
@@ -767,7 +767,7 @@ a.product__text {
 }
 
 .product-media-modal__toggle {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   border: 0.1rem solid hsla(var(--text) / 0.1);
   border-radius: 50%;
   color: hsla(var(--text) / 0.55);
@@ -859,7 +859,7 @@ a.product__text {
 
 .product-popup-modal__content {
   border-radius: var(--popup-corner-radius);
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   overflow: auto;
   height: 80%;
   margin: 0 auto;
@@ -879,7 +879,7 @@ a.product__text {
 }
 
 .product-popup-modal__content.focused {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0.5rem 0.4rem hsla(var(--text) / 0.3),
     var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset)
       var(--popup-shadow-blur-radius)
@@ -887,7 +887,7 @@ a.product__text {
 }
 
 .product-popup-modal__content:focus-visible {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0.5rem 0.4rem hsla(var(--text) / 0.3),
     var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset)
       var(--popup-shadow-blur-radius)
@@ -966,7 +966,7 @@ a.product__text {
 }
 
 .product-popup-modal__toggle {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   border: 0.1rem solid hsla(var(--text) / 0.1);
   border-radius: 50%;
   color: hsla(var(--text) / 0.55);
@@ -1122,14 +1122,14 @@ a.product__text {
 }
 
 .thumbnail[aria-current]:focus-visible {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0rem 0.5rem hsla(var(--text) / 0.5);
 }
 
 .thumbnail[aria-current]:focus,
 .thumbnail.focused {
   outline: 0;
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0rem 0.5rem hsla(var(--text) / 0.5);
 }
 

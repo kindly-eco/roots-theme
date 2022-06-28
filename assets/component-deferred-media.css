@@ -37,7 +37,7 @@
   outline: none;
   box-shadow: 0 0 0 var(--media-border-width)
       hsla(var(--text), var(--media-border-opacity)),
-    0 0 0 calc(var(--media-border-width) + 0.3rem) hsl(var(--color-background)),
+    0 0 0 calc(var(--media-border-width) + 0.3rem) hsl(var(--background)),
     0 0 0 calc(var(--media-border-width) + 0.5rem) hsla(var(--text), 0.5);
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
@@ -46,7 +46,7 @@
   outline: none;
   box-shadow: 0 0 0 var(--media-border-width)
       hsla(var(--text), var(--media-border-opacity)),
-    0 0 0 calc(var(--media-border-width) + 0.3rem) hsl(var(--color-background)),
+    0 0 0 calc(var(--media-border-width) + 0.3rem) hsl(var(--background)),
     0 0 0 calc(var(--media-border-width) + 0.5rem) hsla(var(--text), 0.5);
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
@@ -57,7 +57,7 @@
 }
 
 .deferred-media__poster-button {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   border: 0.1rem solid hsla(var(--text), 0.1);
   border-radius: 50%;
   color: hsl(var(--text));

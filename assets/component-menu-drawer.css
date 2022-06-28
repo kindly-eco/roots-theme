@@ -38,7 +38,7 @@ menu-drawer > details[open] > summary::before {
   width: calc(100vw - 4rem);
   padding: 0;
   border-width: 0 var(--drawer-border-width) 0 0;
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   overflow-x: hidden;
   border-style: solid;
   border-color: hsla(var(--text), var(--drawer-border-opacity));
@@ -179,7 +179,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   border-left: 0.1rem solid hsla(var(--text), 0.2);
   z-index: 1;
   transform: translateX(100%);

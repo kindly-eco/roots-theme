@@ -48,14 +48,14 @@
 }
 
 .rte a {
-  color: hsla(var(--color-link), var(--alpha-link));
+  color: hsla(var(--link), var(--alpha-link));
   text-underline-offset: 0.3rem;
   text-decoration-thickness: 0.1rem;
   transition: text-decoration-thickness var(--duration-short) ease;
 }
 
 .rte a:hover {
-  color: hsl(var(--color-link));
+  color: hsl(var(--link));
   text-decoration-thickness: 0.2rem;
 }
 

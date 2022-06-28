@@ -52,15 +52,15 @@
 }
 
 .newsletter-form__button:focus-visible {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0 0.4rem hsla(var(--text));
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
 }
 
 .newsletter-form__button:focus {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0 0.4rem hsla(var(--text));
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
 }
 
 .newsletter-form__button:not(:focus-visible):not(.focused) {

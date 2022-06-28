@@ -33,7 +33,7 @@
   content: "★★★★★";
   background: linear-gradient(
     90deg,
-    var(--color-icon) var(--percent),
+    var(--accent) var(--percent),
     hsla(var(--text), 0.15) var(--percent)
   );
   -webkit-background-clip: text;

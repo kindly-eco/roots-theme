@@ -1,6 +1,6 @@
 .blog-placeholder {
   margin: 0 1.5rem;
-  background: hsl(var(--color-background));
+  background: hsl(var(--background));
 }
 
 @media screen and (min-width: 750px) {
@@ -60,7 +60,7 @@
 }
 
 .background-secondary .blog-placeholder__content {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
 }
 
 .blog__posts .card-wrapper {

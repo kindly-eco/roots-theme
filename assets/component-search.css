@@ -8,12 +8,12 @@
 }
 
 .search__button:focus-visible {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   z-index: 2;
 }
 
 .search__button:focus {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   z-index: 2;
 }
 

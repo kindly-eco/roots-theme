@@ -131,7 +131,7 @@
 .mobile-facets__sort .select__select:focus-visible {
   outline: 0.2rem solid hsla(var(--text), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0.5rem 0.4rem hsla(var(--text), 0.3);
 }
 
@@ -139,14 +139,14 @@
 .no-js .mobile-facets__sort .select__select:focus {
   outline: 0.2rem solid hsla(var(--text), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0.5rem 0.4rem hsla(var(--text), 0.3);
 }
 
 .facet-filters__sort:focus-visible {
   outline: 0.2rem solid hsla(var(--text), 0.5);
   outline-offset: 1rem;
-  box-shadow: 0 0 0 1rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 1rem hsl(var(--background)),
     0 0 0.2rem 1.2rem hsla(var(--text), 0.3);
 }
 
@@ -154,7 +154,7 @@
 .no-js .facet-filters__sort:focus {
   outline: 0.2rem solid hsla(var(--text), 0.5);
   outline-offset: 1rem;
-  box-shadow: 0 0 0 1rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 1rem hsl(var(--background)),
     0 0 0.2rem 1.2rem hsla(var(--text), 0.3);
 }
 
@@ -252,7 +252,7 @@
   box-shadow: var(--popup-shadow-horizontal-offset)
     var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
     hsla(var(--drop), var(--popup-shadow-opacity));
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   position: absolute;
   top: calc(100% + 0.5rem);
   left: -1.2rem;
@@ -269,7 +269,7 @@
   font-size: 1.4rem;
   position: sticky;
   top: 0;
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   z-index: 1;
 }
 
@@ -313,7 +313,7 @@
 }
 
 .facet-checkbox > svg {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   margin-right: 1.2rem;
   flex-shrink: 0;
 }
@@ -333,7 +333,7 @@
 @media screen and (forced-colors: active) {
   .facet-checkbox > svg {
     background-color: inherit;
-    border: 0.1rem solid hsl(var(--color-background));
+    border: 0.1rem solid hsl(var(--background));
   }
 
   .facet-checkbox > input[type="checkbox"]:checked ~ .icon-checkmark {
@@ -483,14 +483,14 @@ a.active-facets__button.focused,
 
 a.active-facets__button:focus-visible .active-facets__button-inner {
   box-shadow: 0 0 0 0.1rem hsla(var(--text), 0.2),
-    0 0 0 0.2rem hsl(var(--color-background)), 0 0 0 0.4rem hsl(var(--text));
+    0 0 0 0.2rem hsl(var(--background)), 0 0 0 0.4rem hsl(var(--text));
   outline: none;
 }
 
 a.active-facets__button.focused .active-facets__button-inner,
 .no-js a.active-facets__button:focus .active-facets__button-inner {
   box-shadow: 0 0 0 0.1rem hsla(var(--text), 0.2),
-    0 0 0 0.2rem hsl(var(--color-background)), 0 0 0 0.4rem hsl(var(--text));
+    0 0 0 0.2rem hsl(var(--background)), 0 0 0 0.4rem hsl(var(--text));
   outline: none;
 }
 
@@ -575,7 +575,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__inner {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   width: calc(100% - 5rem);
   margin-left: auto;
   height: 100%;
@@ -645,16 +645,16 @@ a.active-facets__button.focused .active-facets__button-inner,
   padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  color: hsla(var(--color-link), var(--alpha-link));
+  color: hsla(var(--link), var(--alpha-link));
 }
 
 .mobile-facets__open:hover {
-  color: hsl(var(--color-link));
+  color: hsl(var(--link));
 }
 
 .mobile-facets__open:hover line,
 .mobile-facets__open:hover circle {
-  stroke: hsl(var(--color-link));
+  stroke: hsl(var(--link));
 }
 
 .mobile-facets__open-label {
@@ -676,7 +676,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 
 .mobile-facets__open line,
 .mobile-facets__open circle {
-  stroke: hsla(var(--color-link), var(--alpha-link));
+  stroke: hsla(var(--link), var(--alpha-link));
 }
 
 .mobile-facets__close {
@@ -834,7 +834,7 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__label > svg {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   position: relative;
   z-index: 2;
   margin-right: 1.2rem;
@@ -870,7 +870,7 @@ input.mobile-facets__checkbox {
   display: flex;
   z-index: 2;
   margin-top: auto;
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   background: var(--gradient-background);
 }
 

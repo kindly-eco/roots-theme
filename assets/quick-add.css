@@ -36,7 +36,7 @@
   transform: translateX(-50%);
   margin: 3.2rem auto 0;
   width: 100%;
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   overflow: hidden;
   max-width: var(--page-width);
   width: calc(100% - 3rem);
@@ -97,7 +97,7 @@
 }
 
 .quick-add-modal__toggle {
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   border: 0.1rem solid hsla(var(--text), 0.1);
   border-radius: 50%;
   color: hsla(var(--text), 0.55);

@@ -21,7 +21,7 @@
   bottom: 100%;
   transform: translateY(-1rem);
   z-index: 2;
-  background-color: hsl(var(--color-background));
+  background-color: hsl(var(--background));
   border-radius: var(--popup-corner-radius);
   box-shadow: var(--popup-shadow-horizontal-offset)
     var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)

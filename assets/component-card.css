@@ -190,13 +190,13 @@
 }
 
 .card__heading a:focus:after {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0.5rem 0.4rem hsla(var(--text), 0.3);
   outline: 0.2rem solid hsla(var(--text), 0.5);
 }
 
 .card__heading a:focus-visible:after {
-  box-shadow: 0 0 0 0.3rem hsl(var(--color-background)),
+  box-shadow: 0 0 0 0.3rem hsl(var(--background)),
     0 0 0.5rem 0.4rem hsla(var(--text), 0.3);
   outline: 0.2rem solid hsla(var(--text), 0.5);
 }

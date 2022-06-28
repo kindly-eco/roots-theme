@@ -1,5 +1,5 @@
 .shopify-model-viewer-ui .shopify-model-viewer-ui__controls-area {
-  background: hsl(var(--color-background));
+  background: hsl(var(--background));
   border-color: hsla(var(--text), 0.04);
 }
 
@@ -26,7 +26,7 @@
 .shopify-model-viewer-ui .shopify-model-viewer-ui__button--poster {
   border-radius: 50%;
   color: hsl(var(--text));
-  background: hsl(var(--color-background));
+  background: hsl(var(--background));
   border-color: hsla(var(--text), 0.1);
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--duration-short) ease,

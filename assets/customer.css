@@ -382,11 +382,8 @@
 .activate button[name="decline"],
 .addresses li > button,
 .addresses form button[type] {
-  background-color: hsla(
-    var(--color-background),
-    var(--alpha-button-background)
-  );
-  color: hsl(var(--color-link));
+  background-color: hsla(var(--background), var(--alpha-button-background));
+  color: hsl(var(--link));
 }
 
 @media only screen and (min-width: 750px) {
@@ -479,13 +476,13 @@
 .account table td:first-of-type a {
   padding: 1.1rem 1.5rem;
   text-decoration: none;
-  box-shadow: 0 0 0 0.1rem hsla(var(--color-link), 0.2);
+  box-shadow: 0 0 0 0.1rem hsla(var(--link), 0.2);
   border: 0.1rem solid transparent;
   font-size: 1.2rem;
 }
 
 .account table td:first-of-type a:hover {
-  box-shadow: 0 0 0 0.2rem hsla(var(--color-link), 0.2);
+  box-shadow: 0 0 0 0.2rem hsla(var(--link), 0.2);
 }
 
 .order td:first-of-type {
