@@ -336,11 +336,12 @@ details[open] .modal-overlay::after {
   transition: transform 150ms ease, opacity 150ms ease;
 }
 
-details > .header__icon--menu .icon-close {
+details > .header__icon--menu > span > .icon-close,
+details[open] > .header__icon--menu > span > .icon-search {
   display: none;
 }
 
-details[open] > .header__icon--menu .icon-close {
+details[open] > .header__icon--menu > span > .icon-close {
   display: block !important;
 }
 
