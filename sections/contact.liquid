@@ -1,0 +1,140 @@
+{{ 'section-contact.css' | asset_url | stylesheet_tag }}
+
+<h2 class="visually-hidden">Contact</h2>
+
+{%- if section.settings.show_address -%}
+  <div>
+    <h3>Find us</h3>
+    <address>
+      {{ shop.address.summary }}
+    </address>
+  </div>
+{%- endif -%}
+
+{%- if section.settings.show_email -%}
+  <div>
+    <h3>Email us</h3>
+    <p><a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+  </div>
+{%- endif -%}
+
+{%- if section.settings.show_phone -%}
+  <div>
+    <h3>Phone us</h3>
+    <p><a href="tel:{{ shop.phone }}">{{ shop.phone }}</a></p>
+  </div>
+{%- endif -%}
+
+{%- if section.settings.show_social -%}
+  <div>
+    <h3>Follow us</h3>
+    <ul>
+      {%- if settings.social_twitter_link != blank -%}
+        <li>
+          <a href="{{ settings.social_twitter_link }}">
+            {%- render 'icon-twitter' -%}
+            <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+      {%- if settings.social_facebook_link != blank -%}
+        <li>
+          <a href="{{ settings.social_facebook_link }}">
+            {%- render 'icon-facebook' -%}
+            <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+      {%- if settings.social_pinterest_link != blank -%}
+        <li>
+          <a href="{{ settings.social_pinterest_link }}">
+            {%- render 'icon-pinterest' -%}
+            <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+      {%- if settings.social_instagram_link != blank -%}
+        <li>
+          <a href="{{ settings.social_instagram_link }}">
+            {%- render 'icon-instagram' -%}
+            <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+      {%- if settings.social_tiktok_link != blank -%}
+        <li>
+          <a href="{{ settings.social_tiktok_link }}">
+            {%- render 'icon-tiktok' -%}
+            <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+      {%- if settings.social_tumblr_link != blank -%}
+        <li>
+          <a href="{{ settings.social_tumblr_link }}">
+            {%- render 'icon-tumblr' -%}
+            <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+      {%- if settings.social_snapchat_link != blank -%}
+        <li>
+          <a href="{{ settings.social_snapchat_link }}">
+            {%- render 'icon-snapchat' -%}
+            <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+      {%- if settings.social_youtube_link != blank -%}
+        <li>
+          <a href="{{ settings.social_youtube_link }}">
+            {%- render 'icon-youtube' -%}
+            <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+      {%- if settings.social_vimeo_link != blank -%}
+        <li>
+          <a href="{{ settings.social_vimeo_link }}">
+            {%- render 'icon-vimeo' -%}
+            <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+    </ul>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Contact",
+    "tag": "aside",
+    "class": "contact",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_address",
+        "default": true,
+        "label": "Show shop address"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_email",
+        "default": true,
+        "label": "Show shop email address"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_phone",
+        "default": true,
+        "label": "Show shop phone number"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_social",
+        "default": true,
+        "label": "Show shop social links"
+      }
+    ]
+  }
+{% endschema %}

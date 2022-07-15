@@ -1,0 +1,78 @@
+section.reviews {
+  background: hsl(var(--background-secondary));
+  padding-block: clamp(3rem, 4vw, 8rem);
+}
+
+section.reviews > h2 {
+  text-align: center;
+}
+
+section.reviews > div {
+  display: grid;
+  gap: clamp(1rem, 8vw, 2rem) clamp(1rem, 8vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  padding-block-start: 1.5rem;
+  place-items: center;
+}
+
+section.reviews > div > blockquote {
+  all: unset;
+  background-color: hsl(var(--elevated));
+  border-block-end: 1px solid hsl(var(--divider));
+  border-radius: 0.5rem;
+  inline-size: 100%;
+  padding: 0;
+}
+
+section.reviews > div > blockquote > span.rating-stars::before {
+  background-clip: text;
+  color: hsl(var(--accent));
+  display: inline-block;
+}
+
+section.reviews > div > blockquote > span.five::before {
+  content: "★ ★ ★ ★ ★";
+}
+
+section.reviews > div > blockquote > span.four::before {
+  content: "★ ★ ★ ★";
+}
+
+section.reviews > div > blockquote > span.three::before {
+  content: "★ ★ ★";
+}
+
+section.reviews > div > blockquote > span.two::before {
+  content: "★ ★";
+}
+
+section.reviews > div > blockquote > span.one::before {
+  content: "★";
+}
+
+section.reviews > div > blockquote > span.rating-stars {
+  display: inline-block;
+  font-size: 1.5em;
+  line-height: 1;
+  padding: 1.5rem 1.25rem 0;
+}
+
+section.reviews > div > blockquote > p {
+  font-style: italic;
+  padding: 0.5rem 1.25rem;
+}
+
+section.reviews > div > blockquote > cite {
+  border-block-start: 1px solid hsl(var(--background-secondary));
+  display: block;
+  font-size: 0.83em;
+  padding: 0.75rem 1.25rem;
+}
+
+section.reviews > div > blockquote > cite > a {
+  color: hsl(var(--text));
+}
+
+section.reviews > div > blockquote > div {
+  display: flex;
+}

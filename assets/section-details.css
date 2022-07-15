@@ -1,0 +1,11 @@
+section.details {
+  display: grid;
+  gap: clamp(2rem, 12vw, 4rem);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 30em) {
+  section.details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,167 @@
+{{ 'section-image-wall.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign image_size = section.settings.image_size
+-%}
+
+{%- style -%}
+:root {
+  --image-size: {{ image_size }};
+}
+{%- endstyle -%}
+
+{% if section.settings.layout_center == true %}
+  <div class="layout-center">
+{% endif %}
+{% if section.settings.heading != blank %}
+    <h2>{{ section.settings.heading | escape }}</h2>
+  {% endif %}
+  {% if section.settings.text != blank %}
+    <p>{{ section.settings.text }}</p>
+  {% endif %}
+  {% if section.settings.layout_center == true %}
+  </div>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    {%- if section.settings.layout_center == true -%}
+      <ul class="layout-center">
+    {% else %}
+      <ul>
+    {%- endif -%}
+      {% for block in section.blocks %}
+        <li>
+          {% if block.settings.link != blank %}
+            <a href="{{ block.settings.link }}"{% if block.settings.link_new_tab == true %} target="_blank"{% endif %}>
+          {% endif %}
+          {% if block.settings.image != blank %}
+            <img
+              src="{{ block.settings.image | image_url: width: 600, height: 600 }}"
+              class="{{ block.settings.image_size }}"
+              alt="{{ block.settings.image.alt }}"
+              loading="lazy"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+              />
+            {% else %}
+              <svg width="128" height="99" viewBox="0 0 128 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M124.5 0.699951H2.99995C1.39995 0.699951 0.199951 1.99995 0.199951 3.49995V96C0.199951 97.6 1.49995 98.7999 2.99995 98.7999H124.6C126.2 98.7999 127.4 97.5 127.4 96V3.49995C127.4 1.89995 126.1 0.699951 124.5 0.699951V0.699951ZM125.6 96C125.6 96.6 125.1 97.1 124.5 97.1H2.99995C2.39995 97.1 1.89995 96.6 1.89995 96V3.49995C1.89995 2.89995 2.39995 2.39995 2.99995 2.39995H124.6C125.2 2.39995 125.7 2.89995 125.7 3.49995V96H125.6Z" fill="black"/>
+                <path d="M10.3999 87.5H39.9999V87.6001C39.9999 87.6001 40.0999 87.6 40.1999 87.5H115.4V11.3H10.3999V87.5V87.5ZM12.1999 80.3L32.1999 60.3C33.7999 58.7 35.9999 57.8 38.2999 57.8C40.5999 57.8 42.7999 58.7 44.3999 60.3L45.8999 61.8L62.6999 78.6001C49.7999 81.9001 41.9999 84.9 39.8999 85.8H12.1999V80.3V80.3ZM113.7 70.2001C93.5999 71.9001 76.9999 75.0001 64.5999 78.1001L47.6999 61.2001L73.9999 34.9C75.5999 33.3 77.7999 32.4 80.0999 32.4C82.3999 32.4 84.5999 33.3 86.1999 34.9L113.7 62.4V70.2001ZM44.7999 85.7001C54.4999 82.2001 78.6999 74.8 113.7 71.9V85.7001H44.7999ZM113.7 13V59.8L87.4999 33.6001C85.5999 31.7001 82.9999 30.6001 80.1999 30.6001C77.3999 30.6001 74.7999 31.7001 72.8999 33.6001L46.5999 59.9L45.6999 59C43.7999 57.1 41.1999 56 38.3999 56C35.5999 56 32.9999 57.1 31.0999 59L12.2999 77.8V13H113.7V13Z" fill="black"/>
+                <path d="M32.8 42C37.4 42 41.1 38.3 41.1 33.7C41.1 29.1 37.4 25.4 32.8 25.4C28.2 25.4 24.5 29.1 24.5 33.7C24.5 38.3 28.2 42 32.8 42ZM32.8 27.1C36.4 27.1 39.4 30 39.4 33.7C39.4 37.4 36.5 40.3 32.8 40.3C29.1 40.3 26.2 37.4 26.2 33.7C26.2 30 29.2 27.1 32.8 27.1Z" fill="black"/>
+              </svg>
+            {% endif %}
+          {% if block.settings.link != blank %}
+            </a>
+          {% endif %}
+          {% if block.settings.link_text != blank %}
+            <p>{{ block.settings.link_text }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+    No blocks
+  {% endif %}
+
+{% schema %}
+{
+  "name": "Image wall",
+  "tag": "section",
+  "class": "image-wall",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Add a heading",
+      "info": "Optional"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "info": "Optional"
+    },
+    {
+      "type": "checkbox",
+      "id": "layout_center",
+      "label": "Center layout",
+      "info": "Optional",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Image size",
+      "default": "320px",
+      "options": [
+        {
+          "value": "180px",
+          "label": "Small"
+        },
+        {
+          "value": "320px",
+          "label": "Medium"
+        },
+        {
+          "value": "520px",
+          "label": "Large"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Image text",
+          "info": "Optional"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Image link URL",
+          "info": "Optional"
+        },
+        {
+          "type": "checkbox",
+          "id": "link_new_tab",
+          "label": "Open link in new browser tab",
+          "info": "Optional",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image wall",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

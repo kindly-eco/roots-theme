@@ -37,6 +37,8 @@
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
 
+      assign accent_color_lightened = settings.accent | color_lighten: 8
+      assign accent_lightened = accent_color_lightened | color_to_hsl | remove: "hsl(" | remove: ")" | remove: ","
       assign accent = settings.accent | color_to_hsl | remove: "hsl(" | remove: ")" | remove: ","
       assign on_accent = settings.on_accent | color_to_hsl | remove: "hsl(" | remove: ")" | remove: ","
     %}
@@ -61,7 +63,8 @@
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }}; 
 
-        --accent: {{ accent }};
+        --accent-on-light: {{ accent }};
+        --accent-on-dark: {{ accent_lightened }};
         --on-accent: {{ on_accent }};
       }
 
@@ -73,7 +76,7 @@
 
       html {
         box-sizing: border-box;
-        font-size: calc(var(--font-body-scale) * 62.5%);
+        font-size: calc(var(--font-body-scale) * 66.5%);
         height: 100%;
       }
 
@@ -84,7 +87,6 @@
         min-height: 100%;
         margin: 0;
         font-size: 1.5rem;
-        letter-spacing: 0.06rem;
         line-height: calc(1 + 0.8 / var(--font-body-scale));
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
@@ -93,7 +95,7 @@
 
       @media screen and (min-width: 750px) {
         body {
-          font-size: 1.6rem;
+          font-size: 1.7rem;
         }
       }
     {% endstyle %}
@@ -137,7 +139,7 @@
     </script>
   </head>
 
-  <body class="gradient">
+  <body>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
@@ -152,6 +154,8 @@
       {{ content_for_layout }}
     </main>
 
+    {% section 'top' %}
+    {% section 'contact' %}
     {% section 'footer' %}
 
     <ul hidden>

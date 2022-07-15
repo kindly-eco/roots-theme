@@ -1,0 +1,22 @@
+section.image-wall > ul {
+  display: grid;
+  gap: clamp(1rem, 12vw, 2rem);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%/3, max(var(--image-size), 100%/6)), 1fr)
+  );
+  list-style: none;
+  padding: 2rem 0;
+}
+
+section.image-wall > div.layout-center {
+  text-align: center;
+}
+
+section.image-wall > ul.layout-center {
+  justify-content: center;
+}
+
+section.image-wall > ul > li {
+  justify-self: center;
+}

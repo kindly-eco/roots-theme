@@ -1,4 +1,7 @@
 :root {
+  /* brand */
+  --accent: var(--accent-on-dark);
+
   /* text */
   --text: var(--slate-1-5);
   --text-secondary: var(--slate-2);

@@ -1,0 +1,42 @@
+section.pull-quotes {
+  padding-block-start: clamp(3rem, 4vw, 8rem);
+}
+
+section.reviews > h2 {
+  text-align: center;
+}
+
+section.pull-quotes > div {
+  display: grid;
+  gap: clamp(1rem, 8vw, 2rem) clamp(1rem, 8vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  place-items: center;
+}
+
+section.pull-quotes > div > blockquote {
+  all: unset;
+  border: 1px solid hsl(var(--divider));
+  border-radius: 0.5rem;
+  inline-size: 100%;
+  padding: 0;
+}
+
+section.pull-quotes > div > blockquote > p {
+  font-style: italic;
+  padding: 0.5rem 1.25rem;
+}
+
+section.pull-quotes > div > blockquote > cite {
+  border-block-start: 1px solid hsl(var(--divider));
+  display: block;
+  font-size: 0.83em;
+  padding: 0.75rem 1.25rem;
+}
+
+section.pull-quotes > div > blockquote > cite > a {
+  color: hsl(var(--text));
+}
+
+section.pull-quotes > div > blockquote > div {
+  display: flex;
+}

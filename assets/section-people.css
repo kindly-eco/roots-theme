@@ -1,0 +1,38 @@
+section.people {
+  padding-block: clamp(2rem, 4vw, 8rem);
+}
+
+section.people > div {
+  display: grid;
+  gap: max(2rem, 4vw) max(2rem, 8vw);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+section.people > div > article {
+  all: unset;
+}
+
+section.people > div > article > img {
+  filter: grayscale(1);
+}
+
+section.people > div > article > img.round {
+  block-size: 8rem;
+  border-radius: 4rem;
+  inline-size: 8rem;
+  object-fit: cover;
+}
+
+section.people > div > article > h3 {
+  margin-block: 0.58em;
+}
+
+section.people > div > article > p {
+  color: hsl(var(--text-secondary));
+  font-size: 0.83em;
+  margin-block-start: 0;
+}
+
+section.people > div > article > div {
+  margin-block-start: 2.5rem;
+}

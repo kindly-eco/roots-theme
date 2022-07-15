@@ -1,4 +1,7 @@
 :root {
+  /* brand */
+  --accent: var(--accent-on-light);
+
   /* text */
   --text: var(--slate-9);
   --text-secondary: var(--slate-5);
@@ -37,7 +40,7 @@
 
   /* dark mode toggle */
   --toggle-label: var(--slate-9);
-  --toggle-track: var(--slate-1-2);
+  --toggle-track: var(--slate-1);
   --toggle-thumb: var(--slate-2);
 
   /* error */

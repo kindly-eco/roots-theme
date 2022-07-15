@@ -1,0 +1,50 @@
+{{ 'section-details.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    <details>
+      <summary>{{ block.settings.summary | escape }}</summary>
+      <div>{{ block.settings.text }}</div>
+    </details>
+  {% endfor %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Details",
+  "tag": "section",
+  "class": "details",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "detail",
+      "name": "Detail",
+      "settings": [
+        {
+          "type": "text",
+          "id": "summary",
+          "label": "Summary",
+          "default": "Add a summary"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add text.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Details",
+      "blocks": [
+        {
+          "type": "detail"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

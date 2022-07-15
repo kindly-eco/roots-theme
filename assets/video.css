@@ -1,0 +1,68 @@
+section.video {
+  padding-block: clamp(2rem, 2vw, 4rem);
+}
+
+section.video > figure {
+  max-inline-size: 48rem;
+}
+
+section.video > figure > deferred-media {
+  aspect-ratio: 16/9;
+  block-size: auto;
+  box-shadow: -28px 34px 34px hsl(var(--drop) / 5%);
+  display: block;
+  display: flex;
+  inline-size: 100%;
+  overflow: hidden;
+  place-content: center;
+  place-items: center;
+  position: relative;
+}
+
+section.video > figure > deferred-media > button {
+  all: unset;
+  background-color: hsl(var(--background));
+  color: hsl(var(--accent));
+  cursor: pointer;
+  display: flex;
+  padding: 2rem;
+  place-content: center;
+  place-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+section.video > figure > deferred-media > button > svg {
+  margin-inline-start: 0.25rem;
+}
+
+@supports (backdrop-filter: blur()) {
+  section.video > figure > deferred-media > button {
+    backdrop-filter: blur(8px);
+    background-color: hsl(var(--background) / 10%);
+  }
+}
+
+section.video > figure > deferred-media > img {
+  position: absolute;
+  z-index: 1;
+}
+
+section.video > figure > deferred-media > iframe {
+  aspect-ratio: 16/9;
+  background: hsl(var(--background));
+  block-size: auto;
+  display: block;
+  inline-size: 100%;
+  inset: 0;
+  position: absolute;
+  z-index: 3;
+}
+
+section.video.centered {
+  padding-inline: max((100% - 48rem) / 2, 12vw);
+}
+
+section.video.centered > figure {
+  max-inline-size: 100%;
+}
